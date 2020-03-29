@@ -1,20 +1,18 @@
 import { Pessoa } from './pessoa.interface';
 import { FormaIngresso } from './enumeration/forma-ingresso.enum';
+import { Turma } from './turma';
 
 export class Professor implements Pessoa {
 
-  nome: string;
-  email: string;
-  cpf: string;
-
   constructor(
-    public pessoa: Pessoa,
+    public nome: string,
+    public email: string,
+    public cpf: string,
     public matricula: number,
-    public formaIngresso: FormaIngresso
+    public formaIngresso: FormaIngresso,
+    public turmas: Turma[]
   ) {
-    this.nome = pessoa.nome;
-    this.email = pessoa.email;
-    this.cpf = pessoa.cpf;
+
   }
 
 }
